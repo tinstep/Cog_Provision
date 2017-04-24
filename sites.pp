@@ -1,3 +1,44 @@
+
+group { 'cognosgrp1':
+  			  ensure => 'present',
+  			  gid    => '551',
+     }
+
+group { 'cognosgrp2':
+  			  ensure => 'present',
+  			  gid    => '552',
+     }
+
+
+user { 'cognos1':
+ 			  ensure           => 'present',
+      home             => '/home/cognos1',
+      comment           => 'service account',
+      groups            => 'web',
+      password         => '!!',
+      password_max_age => '99999',
+      password_min_age => '0',
+      shell            => '/bin/bash',
+      uid              => '1551',
+    }
+    
+user { 'cognos2':
+ 			  ensure           => 'present',
+      home             => '/home/cognos2',
+      comment           => 'service',
+      groups            => 'web',
+      password         => '!!',
+      password_max_age => '99999',
+      password_min_age => '0',
+      shell            => '/bin/bash',
+      uid              => '1552',
+    }
+
+
+
+
+
+
 # execute 'apt-get update'
 exec { 'apt-update':                    # exec resource named 'apt-update'
   command => '/usr/bin/apt-get update'  # command this resource will run
