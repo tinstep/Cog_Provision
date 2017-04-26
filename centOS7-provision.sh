@@ -6,3 +6,4 @@ yum repolist
 yum -y install puppet-agent
 /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 echo "192.168.0.230  pupsvr.cortell.com.au pupsvr" >> /etc/hosts
+echo `hostname -I  pupagt3  pupagt3.cortell.com.au >> /etc/hosts
