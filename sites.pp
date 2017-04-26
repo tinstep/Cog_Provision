@@ -9,29 +9,32 @@ group { 'cognosgrp2':
   			  gid    => '552',
      }
 
-
+# password is same as user
 user { 'cognos1':
  			  ensure           => 'present',
       home             => '/home/cognos1',
       comment           => 'service account',
       groups            => 'web',
-      password         => '!!',
+      password         => '$6$salt$lG0TId1khdHnoxmnhe7jl5/zvlFFUbknSf3ZyD2PuJ5rhKiEjI3L7KujcNjBhBdjapi8hujYqG/I4ajVbr2Pr1',
       password_max_age => '99999',
       password_min_age => '0',
       shell            => '/bin/bash',
       uid              => '1551',
+      managehome       => true,
     }
-    
+
+# pssword is same as user
 user { 'cognos2':
  			  ensure           => 'present',
       home             => '/home/cognos2',
       comment           => 'service',
       groups            => 'web',
-      password         => '!!',
+      password         => '$6$salt$Kr1qMlv.v5VSwZtKZhNdDYcrmeEsEgUoBctr1Zk.T9XYEWfo0DIeBUrwbRXCq1qXYCQ6ueRXA4rbw3RA.2WEg/',
       password_max_age => '99999',
       password_min_age => '0',
       shell            => '/bin/bash',
       uid              => '1552',
+      managehome       => true,
     }
 
 
