@@ -48,6 +48,7 @@ exec { 'apt-update':                    # exec resource named 'apt-update'
 
 package { [
   'puppet',
+  'nano',
   'tmux',
   'screen',
   'htop',
