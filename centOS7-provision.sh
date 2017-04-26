@@ -5,3 +5,4 @@ rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 yum repolist
 yum -y install puppet-agent
 /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
+echo "192.168.0.230  pupsvr.cortell.com.au pupsvr" >> /etc/hosts
