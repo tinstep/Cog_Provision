@@ -62,11 +62,17 @@ package { [
 }
 
 
+$ssh_service = $operatingsystem ? { 
+    /CentOS|RedHat/  => 'sshd', 
+    default          => 'ssh' ,
+} 
+
 package { 'openssh-server':
     ensure => 'latest',
 }
 
 service { 'ssh':
+    name   => $ssh_service
     ensure => running,
     enable => true,
     require => Package['openssh-server']
