@@ -16,7 +16,7 @@ group { 'cognosgrp1':
 group { 'cognosgrp2':
   			  ensure => 'present',
   			  gid    => '552',
-     }
+     
 
 ## password is same as user
 user { 'cognos1':
