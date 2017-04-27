@@ -18,7 +18,7 @@ group { 'cognosgrp2':
   			  gid    => '552',
      }
 
-# password is same as user
+## password is same as user
 user { 'cognos1':
  			ensure           => 'present',
       home             => '/home/cognos1',
